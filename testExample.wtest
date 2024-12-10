@@ -1,0 +1,22 @@
+import parte1.*
+
+describe "TEST DE PARTE 1" {
+
+  test "Cambiar el nombre del espectro maléfico a: espectro superrecontramalefico muajajaja.
+  Conocer el nivel de hechicería de Rolando" {
+    espectroMalefico.cambiarNombre("espectro superrecontramalefico muajajaja")
+    rolando.cambiarHechizoPreferido(espectroMalefico)
+    assert.equals(125, rolando.nivelDeHechiceria())
+  }
+
+  test "Hacer que ocurra un eclipse. Preguntar por el valor de lucha de la máscara oscura."{
+    eclipse.ocurrir()
+    assert.equals(5, mascaraOscura.unidadesDeLucha())
+  }
+
+  test "Eliminar todos los artefactos de Rolando.Incorporar solamente el espejo.Saber cuál es la habilidad para la lucha de Rolando."{
+    rolando.artefactos().clear()
+    rolando.agregarArtefacto(espejo)
+    assert.equals(1, rolando.valorDeLucha())
+  }
+}
